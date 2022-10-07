@@ -89,3 +89,24 @@ const resultado = 9 + '1'
 const resultado2 = 9 - '1'
 console.log(resultado)
 console.log(resultado2)
+
+//Palabra alrevés
+var palabra_ingresada = "coderbyte"
+
+var palabra_alreves = ""
+
+for(var i = palabra_ingresada.length-1; i >= 0; i--){
+    palabra_alreves = palabra_alreves + palabra_ingresada[i]
+}
+
+console.log(palabra_alreves)
+
+//Mostrar en HTML
+
+var elementp = document.getElementById("myP")
+
+console.log(elementp)
+
+console.log(elementp.innerHTML)
+
+elementp.innerHTML="<p>" + palabra_alreves + "</p>"
