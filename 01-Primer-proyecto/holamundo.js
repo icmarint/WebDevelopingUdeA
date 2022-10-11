@@ -110,3 +110,79 @@ console.log(elementp)
 console.log(elementp.innerHTML)
 
 elementp.innerHTML="<p>" + palabra_alreves + "</p>"
+
+let rep = 1
+i = 1
+let n = 5
+
+while(i<n){
+    rep += rep * i;
+    i++;
+}
+
+elementp.innerHTML="<p> Factorial de " + n + " = " + rep + "</p>"
+
+rep = 1
+i = 1
+n = 5
+
+do{
+    rep += rep * i;
+    i++;
+}while(i<n)
+
+elementp.innerHTML="<p> Factorial de " + n + " = " + rep + "</p>"
+
+//Función - Métodos
+
+function holamundo(nombre){
+    return "<p> Hola mundo " + nombre + "</p>"
+}
+
+let rep_funcion = holamundo("Isabel")
+elementp.innerHTML= rep_funcion
+
+//Función anónima o expresiva
+
+let functionAnonima = function(nombre){
+    return "<p> Hola mundo " + nombre + "</p>"
+}
+
+let rep_fun_anonima = functionAnonima("Isabel con funcion anonima")
+elementp.innerHTML = rep_fun_anonima
+
+//Función flecha
+
+let funcionFlecha = (nombre) =>{
+    return "<p> Hola mundo " + nombre + "</p>"
+}
+
+let rep_fun_flecha = funcionFlecha("Isabel con función flecha")
+elementp.innerHTML = rep_fun_flecha
+
+//Función guardada dentro de otra función
+
+function funC(){
+    return function(nombre){
+        document.write("Funcion anonima retornada " + nombre)
+    }
+}
+
+const funcionAnonimaConFuncion = funC()
+
+console.log(funcionAnonimaConFuncion)
+
+funcionAnonimaConFuncion("Isabel")
+
+//Llamados a funciones
+
+var c = function(a,b){
+    document.write("</br>")
+    return a+b
+}
+
+var b = 0;
+b = c.apply(b, [2,3])
+document.write("llamada por medio de un apply "+b)
+b = c.call(b,3,4)
+document.write("llamada por medio de un call "+b)
