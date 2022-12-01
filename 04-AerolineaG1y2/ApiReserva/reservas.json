@@ -1,0 +1,19 @@
+[
+{
+    "_id":"1",
+    "id_client":"123",
+    "sillas":[
+        {
+            "id_vuelo":"1234",
+            "sillas":0,
+            "valor_unidad":0
+        },
+        {
+            "id_vuelo":"12345",
+            "sillas":0,
+            "valor_unidad":0
+        }
+    ],
+    "estado_reserva":""
+}
+]
